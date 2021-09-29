@@ -48,3 +48,5 @@ jobs:
         run: |
           docker build -t n148/springapp:latest . 
           docker push n148/springapp:latest
+
+          
