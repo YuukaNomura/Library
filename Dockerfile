@@ -1,5 +1,8 @@
-FROM openjdk:11
+FROM tomcat:9.0-jdk16
 
-COPY ./src/main/webapp/META-INF/maven/library/library/target/library-0.0.1-SNAPSHOT.jar /root/library.jar
+ARG VERSION
+COPY ./src/main/webapp/META-INF/maven/library/library/target/library-${VERSION}.war /usr/local/tomcat/webapps/library.war
 
-CMD [ "sh", "-c", "java $JAVA_OPTIONS -jar /root/library.jar" ]
+CMD ["catalina.sh", "run"]
+
+#CMD [ "sh", "-c", "java $JAVA_OPTIONS -jar /root/library.jar" ]
