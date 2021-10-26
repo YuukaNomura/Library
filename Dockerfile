@@ -6,3 +6,4 @@ COPY ./src/main/webapp/META-INF/maven/library/library/target/library-${VERSION}.
 CMD ["catalina.sh", "run"]
 
 #CMD [ "sh", "-c", "java $JAVA_OPTIONS -jar /root/library.jar" ]
+
