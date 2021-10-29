@@ -5,10 +5,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class AccessDB {
+	/*
 	private final static String URL
     = "jdbc:mysql://localhost:3306/LIBRARY?serverTimezone=JST";
 	private final static String USER = "user";
     private final static String PASS = "pass";
+    */
+	private final static String URL
+    = "jdbc:mysql://database-1.co082efz6cnk.ap-northeast-1.rds.amazonaws.com:3306/LIBRARY?serverTimezone=JST";
+	private final static String USER = "admin";
+    private final static String PASS = "JavaTestDB";
 
     public static Connection conn = null;
 
